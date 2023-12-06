@@ -1,6 +1,13 @@
 <script>
-const { sayHello } = useUtils();
-sayHello();
+//--- Using plugins ---
+const { $sayHello } = useNuxtApp();
+$sayHello("Nami");
+
+//--- Using useUtils ---
+// const { sayHello } = useUtils();
+// sayHello();
+
+//--- Using simple structure ---
 // const sayHello = () => console.log("Hello");
 // sayHello();
 </script>
