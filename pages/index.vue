@@ -1,7 +1,11 @@
-<script>
+<script setup lang="ts">
+definePageMeta({
+  middleware: "auth"
+})
+
 //--- Using plugins ---
-const { $sayHello } = useNuxtApp();
-$sayHello("Nami");
+// const { $sayHello } = useNuxtApp();
+// $sayHello("Nami");
 
 //--- Using useUtils ---
 // const { sayHello } = useUtils();
