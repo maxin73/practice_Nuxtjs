@@ -22,5 +22,6 @@ definePageMeta({
     <Profile /> -->
     <h1 class="text-teal-500">Main Page</h1>
     <!-- <img src="~/assets/apple.png" alt="" /> -->
+    <ContentDoc />
   </div>
 </template>
