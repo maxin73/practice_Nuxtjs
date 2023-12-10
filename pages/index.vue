@@ -1,7 +1,11 @@
 <script setup lang="ts">
-definePageMeta({
-  middleware: "auth"
-})
+// --- useState ---
+const counter = useCounter();
+
+// --- Practice Middlewares ---
+// definePageMeta({
+//   middleware: "auth"
+// })
 
 //--- Using plugins ---
 // const { $sayHello } = useNuxtApp();
@@ -22,6 +26,18 @@ definePageMeta({
     <Profile /> -->
     <h1 class="text-teal-500">Main Page</h1>
     <!-- <img src="~/assets/apple.png" alt="" /> -->
-    <ContentDoc />
+    <!-- <ContentDoc /> -->
+    <div id="main">
+      Counter: {{ counter }}
+      <button @click="counter++">
+        +
+      </button>
+      <button @click="counter--">
+        -
+      </button>
+    </div>
+    <Counter id="counter" />
   </div>
 </template>
+
+
