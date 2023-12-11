@@ -1,6 +1,10 @@
 <script setup lang="ts">
+// --- server/api ---
+const response = await $fetch('/api/hello')
+console.log(response);
+
 // --- useState ---
-const counter = useCounter();
+// const counter = useCounter();
 
 // --- Practice Middlewares ---
 // definePageMeta({
