@@ -12,9 +12,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  // ssr: false,
 });
 
-// function defineNuxtConfig(arg0: { alias: { "@": string; }; css: string[]; }) {
-//   throw new Error("Function not implemented.");
-// }
 

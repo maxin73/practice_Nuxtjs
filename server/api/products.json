@@ -1,0 +1,10 @@
+[{
+  "name": "Product 1",
+  "price": 9.99,
+  "description": "This is the first product in the array"
+},
+{
+  "name": "Product 2",
+  "price": 9.99,
+  "description": "This is the second product in the array"
+}]

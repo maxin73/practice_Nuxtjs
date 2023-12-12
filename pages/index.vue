@@ -1,7 +1,13 @@
 <script setup lang="ts">
+// --- useFetch ---
+const { data: product, pending } = await useLazyFetch("/api/product");
+  // transform: (_product) => _product.data
+// console.log(toRaw(product.value));
+
+
 // --- server/api ---
-const response = await $fetch('/api/hello')
-console.log(response);
+// const response = await $fetch('/api/hello')
+// console.log(response);
 
 // --- useState ---
 // const counter = useCounter();
@@ -31,7 +37,7 @@ console.log(response);
     <h1 class="text-teal-500">Main Page</h1>
     <!-- <img src="~/assets/apple.png" alt="" /> -->
     <!-- <ContentDoc /> -->
-    <div id="main">
+    <!-- <div id="main">
       Counter: {{ counter }}
       <button @click="counter++">
         +
@@ -40,7 +46,9 @@ console.log(response);
         -
       </button>
     </div>
-    <Counter id="counter" />
+    <Counter id="counter" /> -->
+    <!-- <p>{{ pending ? "Loading" : product }}</p> -->
+    <p>{{ product }}</p>
   </div>
 </template>
 
