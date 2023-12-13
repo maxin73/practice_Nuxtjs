@@ -1,9 +1,13 @@
 <script setup lang="ts">
+// --- useAsyncData ---
+const { data: productCount, pending } = await useAsyncData("products", () => 
+  $fetch("/api/products")
+)
+const refresh = () => refreshNuxtData("products");
 // --- useFetch ---
-const { data: product, pending } = await useLazyFetch("/api/product");
+// const { data: product, pending } = await useLazyFetch("/api/product");
   // transform: (_product) => _product.data
 // console.log(toRaw(product.value));
-
 
 // --- server/api ---
 // const response = await $fetch('/api/hello')
@@ -47,8 +51,9 @@ const { data: product, pending } = await useLazyFetch("/api/product");
       </button>
     </div>
     <Counter id="counter" /> -->
-    <!-- <p>{{ pending ? "Loading" : product }}</p> -->
-    <p>{{ product }}</p>
+    <p>{{ pending ? "Loading" : productCount }}</p>
+      <button @click="refresh">Refresh</button>
+    <!-- <p>{{ product }}</p> -->
   </div>
 </template>
 
