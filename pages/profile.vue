@@ -1,6 +1,10 @@
-<script>
-const sayHello = () => console.log("Goodbye");
-sayHello();
+<script setup lang="ts">
+// --- useHead ---
+useHead({
+  title: "profile page",
+})
+// const sayHello = () => console.log("Goodbye");
+// sayHello();
 </script>
 
 <template>
